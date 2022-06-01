@@ -3,15 +3,16 @@ import React from 'react'
 import { Ionicons, EvilIcons, Feather, AntDesign } from '@expo/vector-icons'
 
 // import { Rating, AirbnbRating } from 'react-native-star-rating'
-import { StarReview } from 'react-native-star-rating';
+// import { StarReview } from 'react-native-star-rating';
+// import { AirbnbRating } from 'react-native-ratings'
 
 const Men = () => {
 
     const dressMen = [
         {
             id: 1,
-            image: require('../assets/mensmall.png'),
-            name: 'Bike  Soft Pattern',
+            image: require('../assets/mensmall.png') ,
+            name: 'Bike Jacket Soft Pattern',
             price: 99,
             star: 'FIVE STARS',
         },
@@ -20,9 +21,9 @@ const Men = () => {
             name: 'Men Stretch Gym Fit',
             price: 85,
             star: 'FIVE STARS',
-            image: require('../assets/pr.png'),
+            image: require('../assets/pr.png') ,
         }
-        // {
+                // {
         //     id: 3,
         //     name: 'Compression Running Fit',
         //     price: 120,
@@ -73,8 +74,7 @@ const Men = () => {
             <View style={styles.text}>
                 <Text style={styles.name}>{item.name}</Text>
                 {/* <Text style={styles.star}>{item.star}</Text> */}
-                {/* <AirbnbRating /> */}
-                
+                {/* <AirbnbRating style={styles.star} /> */}
                 <Text style={styles.price}>${item.price}</Text>
             </View>
         </View>
@@ -94,10 +94,10 @@ const Men = () => {
             <View style={styles.icons}>
                 {/* ICONS */}
                 <View style={styles.iconA}>
-                    <AntDesign name="arrowleft" size={17} color="black" />
+                <AntDesign name="arrowleft" size={17} color="black" />
                 </View>
                 <View style={styles.iconB}>
-                    <Feather name="shopping-cart" size={16} color="black" /></View>
+                <Feather name="shopping-cart" size={16} color="black" /></View>
             </View>
 
 
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
         fontWeight: '700',
     },
 
-    icons: {
+      icons: {
         // flex: 4,
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -200,33 +200,33 @@ const styles = StyleSheet.create({
         height: 40,
         // paddingRight: 10,
         marginBottom: 30,
-    },
+      },
 
-    iconA: {
-        // flex: 2, 
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-        // borderWidth: 1,.
-        // borderColor: '#9269bd',
-        backgroundColor: 'white',
-        color: '#9269bd',
-    },
+      iconA: {
+    // flex: 2, 
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    // borderWidth: 1,.
+    // borderColor: '#9269bd',
+    backgroundColor: 'white',
+    color: '#9269bd',
+      },
 
-    iconB: {
+      iconB: {
         // flex: 2, 
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-        // borderWidth: 1,
-        // borderColor: '#9269bd',
-        backgroundColor: 'white',
-        color: '#9269bd',
-    },
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    // borderWidth: 1,
+    // borderColor: '#9269bd',
+    backgroundColor: 'white',
+    color: '#9269bd',
+          },
 
     item: {
         // flex: 2,
@@ -310,5 +310,7 @@ const styles = StyleSheet.create({
     //     // fontSize: 14,
     //     alignItems: 'center',
     //     justifyContent: 'center',
+    //     width: 100,
+    //     height: 40,
     //   },
 })
