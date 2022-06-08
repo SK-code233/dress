@@ -1,18 +1,78 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
+import { Ionicons, EvilIcons, Feather, AntDesign } from '@expo/vector-icons'
 
 const Women = () => {
   return (
-    <View>
-      {/* <Text>Women</Text> */}
-      {/* <Image source={}/> */}
+    <View style={styles.main}>
+
+      <View style={styles.top}></View>
+
+      <View style={styles.icons}>
+        {/* ICONS */}
+        <View style={styles.iconA}>
+          <AntDesign name="arrowleft" size={17} color="black" />
+        </View>
+        <View style={styles.iconB}>
+          <Feather name="shopping-cart" size={16} color="black" />
+        </View>
+      </View>
     </View>
   )
 }
 
 export default Women
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  
+  main: {
+    // backgroundColor: '#fffdfc',
+    paddingTop: 10,
+    marginTop: 50,
+},
+
+top: {
+    // flex: 1,
+},
+
+icons: {
+  // flex: 4,
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  marginHorizontal: 15,
+  height: 40,
+  // paddingRight: 10,
+  marginBottom: 30,
+},
+
+iconA: {
+// flex: 2, 
+alignItems: 'center',
+justifyContent: 'center',
+width: 40,
+height: 40,
+borderRadius: 20,
+// borderWidth: 1,.
+// borderColor: '#9269bd',
+backgroundColor: 'white',
+color: '#9269bd',
+},
+
+iconB: {
+  // flex: 2, 
+alignItems: 'center',
+justifyContent: 'center',
+width: 40,
+height: 40,
+borderRadius: 20,
+// borderWidth: 1,
+// borderColor: '#9269bd',
+backgroundColor: 'white',
+color: '#9269bd',
+    },
+
+})
 
 // import { Rating, AirbnbRating } from 'react-native-ratings';
 

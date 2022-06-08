@@ -3,15 +3,16 @@ import React from 'react'
 import { Ionicons, EvilIcons, Feather, AntDesign } from '@expo/vector-icons'
 
 // import { Rating, AirbnbRating } from 'react-native-star-rating'
-import { StarReview } from 'react-native-star-rating';
+// import { StarReview } from 'react-native-star-rating';
+// import { AirbnbRating } from 'react-native-ratings'
 
 const Men = () => {
 
     const dressMen = [
         {
             id: 1,
-            image: require('../assets/mensmall.png'),
-            name: 'Bike  Soft Pattern',
+            image: require('../assets/mensmall.png') ,
+            name: 'Bike Jacket Soft Pattern',
             price: 99,
             star: 'FIVE STARS',
         },
@@ -20,9 +21,9 @@ const Men = () => {
             name: 'Men Stretch Gym Fit',
             price: 85,
             star: 'FIVE STARS',
-            image: require('../assets/pr.png'),
-        }
-        // {
+            image: require('../assets/pr.png') ,
+        },
+                // {
         //     id: 3,
         //     name: 'Compression Running Fit',
         //     price: 120,
@@ -58,7 +59,6 @@ const Men = () => {
         //     image: require('../assets/mensmallf.png') 
         // },
 
-
     ];
 
     const [text, onChangeText] = React.useState('');
@@ -73,17 +73,23 @@ const Men = () => {
             <View style={styles.text}>
                 <Text style={styles.name}>{item.name}</Text>
                 {/* <Text style={styles.star}>{item.star}</Text> */}
-                {/* <AirbnbRating /> */}
-                
+                {/* <AirbnbRating style={styles.star} /> */}
+                {/* <StarReview
+  ratings={5}
+  stars={10}
+  starColor="#8409ff"
+  reviews={219301495}
+  reviewsText="contributions"
+/> */}
                 <Text style={styles.price}>${item.price}</Text>
             </View>
         </View>
     )
 
 
-    itemSeparator = () => {
-        return <View style={styles.separator} />
-    }
+    // itemSeparator = () => {
+    //     return <View style={styles.separator} />
+    // }
 
 
     return (
@@ -94,10 +100,10 @@ const Men = () => {
             <View style={styles.icons}>
                 {/* ICONS */}
                 <View style={styles.iconA}>
-                    <AntDesign name="arrowleft" size={17} color="black" />
+                <AntDesign name="arrowleft" size={17} color="black" />
                 </View>
                 <View style={styles.iconB}>
-                    <Feather name="shopping-cart" size={16} color="black" /></View>
+                <Feather name="shopping-cart" size={16} color="#5a54fa" /></View>
             </View>
 
 
@@ -121,12 +127,9 @@ const Men = () => {
 
             {/* ITEMS */}
             <FlatList
-                // ListHeaderComponentStyle={styles.listHeader}
-                // ListHeaderComponent={headerComponent}
                 data={dressMen}
                 renderItem={eachDress}
-                ItemSeparatorComponent={itemSeparator}
-            // ListEmptyComponent={listEmpty}
+                // ItemSeparatorComponent={itemSeparator}
             // keyExtractor={ people }
             />
 
@@ -140,7 +143,7 @@ const styles = StyleSheet.create({
 
     main: {
         // backgroundColor: '#fffdfc',
-        paddingTop: 10,
+        // paddingTop: 10,
         marginTop: 50,
     },
 
@@ -158,7 +161,7 @@ const styles = StyleSheet.create({
 
     input: {
         width: 290,
-        height: 40,
+        height: 50,
         borderRadius: 8,
         alignItems: 'center',
         alignSelf: 'center',
@@ -187,11 +190,11 @@ const styles = StyleSheet.create({
 
     filterTxt: {
         fontSize: 12,
-        color: '#9269bd',
+        color: '#6675ff',
         fontWeight: '700',
     },
 
-    icons: {
+      icons: {
         // flex: 4,
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -200,33 +203,34 @@ const styles = StyleSheet.create({
         height: 40,
         // paddingRight: 10,
         marginBottom: 30,
-    },
+        // backgroundColor: 'blue',
+      },
 
-    iconA: {
-        // flex: 2, 
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-        // borderWidth: 1,.
-        // borderColor: '#9269bd',
-        backgroundColor: 'white',
-        color: '#9269bd',
-    },
+      iconA: {
+    // flex: 2, 
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 50,
+    height: 50,
+    borderRadius: 29,
+    // borderWidth: 1,.
+    // borderColor: '#9269bd',
+    backgroundColor: 'white',
+    color: '#9269bd',
+      },
 
-    iconB: {
+      iconB: {
         // flex: 2, 
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-        // borderWidth: 1,
-        // borderColor: '#9269bd',
-        backgroundColor: 'white',
-        color: '#9269bd',
-    },
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 50,
+    height: 50,
+    borderRadius: 29,
+    // borderWidth: 1,
+    // borderColor: '#9269bd',
+    backgroundColor: 'white',
+    // color: '#9269bd',
+          },
 
     item: {
         // flex: 2,
@@ -298,17 +302,19 @@ const styles = StyleSheet.create({
     },
 
     price: {
-        color: '#9269bd',
+        color: '#6d7cff',
         fontSize: 15,
         fontWeight: '800',
         alignItems: 'center',
         justifyContent: 'center',
     },
 
-    //   star: {
-    //     color: '#708c98',
-    //     // fontSize: 14,
-    //     alignItems: 'center',
-    //     justifyContent: 'center',
-    //   },
+      star: {
+        color: '#708c98',
+        // fontSize: 14,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 100,
+        height: 40,
+      },
 })
