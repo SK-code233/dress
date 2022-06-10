@@ -1,10 +1,7 @@
 import { StyleSheet, Text, View, FlatList, Image, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { Ionicons, EvilIcons, Feather, AntDesign } from '@expo/vector-icons'
+import { FontAwesome, Ionicons, EvilIcons, Feather, AntDesign } from '@expo/vector-icons'
 
-// import { Rating, AirbnbRating } from 'react-native-star-rating'
-// import { StarReview } from 'react-native-star-rating';
-// import { AirbnbRating } from 'react-native-ratings'
 
 const Men = () => {
 
@@ -12,52 +9,59 @@ const Men = () => {
         {
             id: 1,
             image: require('../assets/mensmall.png') ,
-            name: 'Bike Jacket Soft Pattern',
+            name: 'Bike Jacket Soft Zipper',
             price: 99,
-            star: 'FIVE STARS',
+            // star: 'FIVE STARS',
         },
         {
             id: 2,
-            name: 'Men Stretch Gym Fit',
+            name: 'Men Stretch Hoodie Fit ',
             price: 85,
-            star: 'FIVE STARS',
-            image: require('../assets/pr.png') ,
+            // star: 'FIVE STARS',
+            image: require('../assets/mensmalla.png') ,
         },
-                // {
-        //     id: 3,
-        //     name: 'Compression Running Fit',
-        //     price: 120,
-        //     star: 'FIVE STARS',
-        //     image: require('../assets/mensmallb.png') 
-        // },
-        // {
-        //     id: 4,
-        //     name: 'K',
-        //     price: 98,
-        //     star: 'FIVE STARS',
-        //     image: require('../assets/productb.png') 
-        // },
-        // {
-        //     id: 5,
-        //     name: 'i',
-        //     price: 118,
-        //     star: 'FIVE STARS',
-        //     image: require('../assets/mensmalld.png') 
-        // },
-        // {
-        //     id: 6,
-        //     name: 'N',
-        //     price: 150,
-        //     star: 'FIVE STARS',
-        //     image: require('../assets/mensmalla.png'),
-        // },
-        // {
-        //     id: 7,
-        //     name: 'KL',
-        //     price: 110,
-        //     star: 'FIVE STARS',
-        //     image: require('../assets/mensmallf.png') 
-        // },
+                {
+            id: 3,
+            name: 'Red Bike Jacket Zipper',
+            price: 120,
+            // star: 'FIVE STARS',
+            image: require('../assets/mensmallb.png') 
+        },
+        {
+            id: 4,
+            name: 'Men Stretch Hoodie Fit with Zip',
+            price: 98,
+            // star: 'FIVE STARS',
+            image: require('../assets/mensmallc.png') 
+        },
+        {
+            id: 5,
+            name: 'Compression Running Fit',
+            price: 118,
+            // star: 'FIVE STARS',
+            image: require('../assets/mensmalld.png') 
+        },
+        {
+            id: 6,
+            name: 'Bike Jacket Soft Pattern',
+            price: 150,
+            // star: 'FIVE STARS',
+            image: require('../assets/mensmalle.png'),
+        },
+        {
+            id: 7,
+            name: 'Comression Fit Blue',
+            price: 110,
+            // star: 'FIVE STARS',
+            image: require('../assets/mensmallf.png') 
+        },
+        {
+            id: 8,
+            name: 'Hoodie Running Jacket',
+            price: 100,
+            // star: 'FIVE STARS',
+            image: require('../assets/mensmallg.png') 
+        },
 
     ];
 
@@ -65,25 +69,23 @@ const Men = () => {
 
 
     const eachDress = ({ item }) => (
-        <View style={styles.item}>
+        <TouchableOpacity style={styles.item}>
 
             <View style={styles.imageContain}>
                 <Image source={item.image} style={styles.image} />
             </View>
             <View style={styles.text}>
                 <Text style={styles.name}>{item.name}</Text>
-                {/* <Text style={styles.star}>{item.star}</Text> */}
-                {/* <AirbnbRating style={styles.star} /> */}
-                {/* <StarReview
-  ratings={5}
-  stars={10}
-  starColor="#8409ff"
-  reviews={219301495}
-  reviewsText="contributions"
-/> */}
+                <View style={styles.star}>
+                    <FontAwesome  name="star" size={13} color="#fabe18f2" />
+                    <FontAwesome  name="star" size={13} color="#fabe18f2" />
+                    <FontAwesome  name="star" size={13} color="#fabe18f2" />
+                    <FontAwesome  name="star" size={13} color="#fabe18f2" />
+                    <FontAwesome  name="star" size={13} color="#cac9de" />
+                </View>
                 <Text style={styles.price}>${item.price}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 
 
@@ -99,11 +101,11 @@ const Men = () => {
 
             <View style={styles.icons}>
                 {/* ICONS */}
-                <View style={styles.iconA}>
+                <TouchableOpacity style={styles.iconA}>
                 <AntDesign name="arrowleft" size={17} color="black" />
-                </View>
-                <View style={styles.iconB}>
-                <Feather name="shopping-cart" size={16} color="#5a54fa" /></View>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.iconB}>
+                <Feather name="shopping-cart" size={16} color="#5a54fa" /></TouchableOpacity>
             </View>
 
 
@@ -145,6 +147,7 @@ const styles = StyleSheet.create({
         // backgroundColor: '#fffdfc',
         // paddingTop: 10,
         marginTop: 50,
+        marginLeft: -10,
     },
 
     top: {
@@ -238,14 +241,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 10,
         paddingHorizontal: 10,
-        justifyContent: 'center',
+        // justifyContent: 'center',
     },
 
     imageContain: {
         // backgroundColor: '#0f8898',
         // borderRadius: 20,
-        height: 110,
-        width: 110,
+        height: 120,
+        width: 120,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -253,8 +256,8 @@ const styles = StyleSheet.create({
     image: {
         // borderRadius: 20,
         // backgroundColor: '#0ff8f8',
-        height: 100,
-        width: 100,
+        height: 120,
+        width: 120,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -310,11 +313,14 @@ const styles = StyleSheet.create({
     },
 
       star: {
-        color: '#708c98',
+        // color: '#708c98',
         // fontSize: 14,
+        flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
-        width: 100,
-        height: 40,
+        justifyContent: 'space-between',
+        width: 70,
+        // height: 40,
+        marginTop: 2,
+        marginBottom: 5,
       },
 })
